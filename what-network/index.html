@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <title>What Network?</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400" rel="stylesheet">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <style type="text/css">
         body { padding:0; margin:0; }
         * { font-family: 'Raleway', sans-serif; }
@@ -59,6 +61,21 @@
             color: #eee;
             padding: 10px 0;
         }
+        .theNetwork {
+            margin: 40px 0 0 0;
+            text-align: center;
+            font-size: 36pt;
+            font-weight:200;
+        }
+        .btnClear {
+            width:70px;
+            display: block;
+            background: #196;
+            padding: 10px 20px;
+            margin: 25px auto;
+            font-size:21pt;
+        }
+        .btnClear:hover { text-decoration:none; }
         a { color:#eee; text-decoration:none; }
         a:hover { text-decoration:underline; }
     </style>
@@ -68,10 +85,160 @@
     <h2>What network is it?</h2>
     <h3>Smart | Globe | Sun? Ask here.</h3>
     <form>
-        <input type="text" name="number" maxlength="4">
+        <input type="text" name="number" maxlength="4" placeholder="09XX">
         <button>?</button>
     </form>
     <div class="clearfix"></div>
+    <p class="theNetwork" style="display:none"></p>
+    <a href="#" class="btnClear" >Clear</a>
+    <table border="1" style="display:none">
+        <tr>
+            <td rowspan="2" style="width:47px">First 3 Digits</td>
+            <td colspan="10">Third Digit</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>090</td>
+            <td class="num-0901"></td>
+            <td class="num-0902"></td>
+            <td class="num-0903"></td>
+            <td class="num-0904"></td>
+            <td class="num-0905">G</td>
+            <td class="num-0906">G</td>
+            <td class="num-0907">SM</td>
+            <td class="num-0908">SM</td>
+            <td class="num-0909">SM</td>
+            <td class="num-0900"></td>
+        </tr>
+        <tr>
+            <td>091</td>
+            <td class="num-0911"></td>
+            <td class="num-0912">SM</td>
+            <td class="num-0913"></td>
+            <td class="num-0914"></td>
+            <td class="num-0915">G</td>
+            <td class="num-0916">G</td>
+            <td class="num-0917">G</td>
+            <td class="num-0918">SM</td>
+            <td class="num-0919">SM</td>
+            <td class="num-0910">SM</td>
+        </tr>
+        <tr>
+            <td>092</td>
+            <td class="num-0921">SN</td>
+            <td class="num-0922">SU</td>
+            <td class="num-0923">SU</td>
+            <td class="num-0924"></td>
+            <td class="num-0925">SU</td>
+            <td class="num-0926">G</td>
+            <td class="num-0927">G</td>
+            <td class="num-0928">SM</td>
+            <td class="num-0929">SM</td>
+            <td class="num-0920">SM</td>
+        </tr>
+        <tr>
+            <td>093</td>
+            <td class="num-0931"></td>
+            <td class="num-0932">SU</td>
+            <td class="num-0933">SU</td>
+            <td class="num-0934"></td>
+            <td class="num-0935">G</td>
+            <td class="num-0936">G</td>
+            <td class="num-0937">ABS/G</td>
+            <td class="num-0938">SM</td>
+            <td class="num-0939">SM</td>
+            <td class="num-0930">SM</td>
+        </tr>
+        <tr>
+            <td>094</td>
+            <td class="num-0941"></td>
+            <td class="num-0942">SU</td>
+            <td class="num-0943">SU</td>
+            <td class="num-0944"></td>
+            <td class="num-0945">G</td>
+            <td class="num-0946">SM</td>
+            <td class="num-0947">SM</td>
+            <td class="num-0948">SM</td>
+            <td class="num-0949">SM</td>
+            <td class="num-0940"></td>
+        </tr>
+        <tr>
+            <td>095</td>
+            <td class="num-0951"></td>
+            <td class="num-0952"></td>
+            <td class="num-0953"></td>
+            <td class="num-0954"></td>
+            <td class="num-0955">G</td>
+            <td class="num-0956">G</td>
+            <td class="num-0957"></td>
+            <td class="num-0958"></td>
+            <td class="num-0959"></td>
+            <td class="num-0950">SM</td>
+        </tr>
+        <tr>
+            <td>096</td>
+            <td class="num-0961"></td>
+            <td class="num-0962"></td>
+            <td class="num-0963"></td>
+            <td class="num-0964"></td>
+            <td class="num-0965">G</td>
+            <td class="num-0966">G</td>
+            <td class="num-0967"></td>
+            <td class="num-0968"></td>
+            <td class="num-0969"></td>
+            <td class="num-0960"></td>
+        </tr>
+        <tr>
+            <td>097</td>
+            <td class="num-0971"></td>
+            <td class="num-0972"></td>
+            <td class="num-0973">E</td>
+            <td class="num-0974">E</td>
+            <td class="num-0975">G</td>
+            <td class="num-0976"></td>
+            <td class="num-0977">G</td>
+            <td class="num-0978">N</td>
+            <td class="num-0979">N</td>
+            <td class="num-0970"></td>
+        </tr>
+        <tr>
+            <td>098</td>
+            <td class="num-0981"></td>
+            <td class="num-0982"></td>
+            <td class="num-0983"></td>
+            <td class="num-0984"></td>
+            <td class="num-0985"></td>
+            <td class="num-0986"></td>
+            <td class="num-0987"></td>
+            <td class="num-0988"></td>
+            <td class="num-0989">SM</td>
+            <td class="num-0980"></td>
+        </tr>
+        <tr>
+            <td>099</td>
+            <td class="num-0991"></td>
+            <td class="num-0992"></td>
+            <td class="num-0993"></td>
+            <td class="num-0994"></td>
+            <td class="num-0995">G</td>
+            <td class="num-0996">CP/G</td>
+            <td class="num-0997">G</td>
+            <td class="num-0998">SM</td>
+            <td class="num-0999">SM</td>
+            <td class="num-0990"></td>
+        </tr>
+    </table>
     <div class="bottom-margin"></div>
     <footer>
         Developed with love, by:
@@ -81,9 +248,73 @@
       src="https://code.jquery.com/jquery-3.3.1.js"
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script type="text/javascript">
-        $('form').submit(function(){
-            return false;
+        $(function() {
+            // DOM ELEMENTS
+            var btnClear = $('.btnClear');
+            var theNetwork = $('.theNetwork');
+            var form = $('form');
+
+            var o = (function(){
+                var obj = function(){};
+                var _input = '';
+                var _network = '';
+                var _networks = {
+                    ''   : 'not yet defined.',
+                    'G'  : 'Globe Telecom',
+                    'SM' : 'Smart Communications',
+                    'SU' : 'Sun Cellular',
+                    'E'  : 'Express Telecom',
+                    'N'  : 'Next Mobile',
+                    'ABS': 'ABS-CBN Mobile',
+                    'CP' : 'Cherry Prepaid'
+                }
+
+                obj.prototype.readInput = function() {
+                    _input = $('input[name=number]').val();
+                    return this;
+                };
+
+                obj.prototype.showThings = function() {
+                    theNetwork.text('The network of ' + _input + ' is ' + _network);
+                    theNetwork.show();
+                    btnClear.show();
+                    return this;
+                };
+
+                obj.prototype.getNetwork = function() {
+                    _network = $('.num-' + _input).text();
+                    networks = _network.split('/');
+                    _network = '';
+                    for (var i = 0; i < networks.length; i++) {
+                        _network += _networks[networks[i]] + ' or ';
+                    }
+                    _network = _network.substring(0, _network.length - 3);
+                    return this;
+                };
+
+                return new obj;
+            })();
+
+            form.submit(function(){
+                var input = readInput();
+                o.readInput()
+                .getNetwork()
+                .showThings();
+                return false;
+            });
+
+            btnClear.click(function() {
+                theNetwork.hide();
+                btnClear.hide();
+                return false;
+            });
+
+            function readInput()
+            {
+                return $('input[name=number]').val();
+            }
         });
     </script>
 </body>
