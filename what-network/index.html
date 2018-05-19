@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>What Network?</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+    <style type="text/css">
+        * { font-family: 'Raleway', sans-serif; }
+        .clearfix { display:block; clear:both; }
+        input {
+            display: block;
+            float: left;
+            width: 67px;
+            padding: 5px;
+            font-size: 21pt;
+        }
+        button {
+            display: block;
+            float: left;
+            cursor: pointer;
+            width: 50px;
+            padding: 9px;
+            font-size: 18pt;
+            background: #196;
+            color: #fff;
+            border: none;
+        }
+        form {
+            display: block;
+            width: 131px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>What network is it?</h1>
+    <form>
+        <input type="text" name="number">
+        <button>?</button>
+    </form>
+    <div class="clearfix"></div>
+    <footer>
+        Developed with love, by:
+        <a href="https://ghabxph.info">GhabXPH</a>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $('form').submit(function(){
+            return false;
+        });
+    </script>
+</body>
+</html>
