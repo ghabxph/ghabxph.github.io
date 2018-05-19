@@ -2,48 +2,77 @@
 <html lang="en">
 <head>
     <title>What Network?</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400" rel="stylesheet">
     <style type="text/css">
+        body { padding:0; margin:0; }
         * { font-family: 'Raleway', sans-serif; }
         .clearfix { display:block; clear:both; }
+        .bottom-margin { height:200px; }
         input {
             display: block;
             float: left;
-            width: 67px;
+            width: 195px;
             padding: 5px;
-            font-size: 21pt;
+            font-size: 60pt;
+            text-align: center;
         }
         button {
             display: block;
             float: left;
             cursor: pointer;
-            width: 50px;
-            padding: 9px;
-            font-size: 18pt;
+            width: 107px;
+            padding: 7px;
+            font-size: 60pt;
             background: #196;
             color: #fff;
             border: none;
         }
         form {
             display: block;
-            width: 131px;
+            width: 316px;
             margin: auto;
         }
         h1 {
+            font-weight: 100;
             text-align: center;
+            margin: 100px 0 0 0;
+            font-size: 85pt;
+        }
+        h2 {
+            text-align: center;
+            font-weight: 300;
+            font-size: 50pt;
+            margin: 0;
+        }
+        h3 {
+            font-weight: 100;
+            text-align: center;
+            margin: 0 0 50px 0;
+            font-size: 26pt;
         }
         footer {
             text-align: center;
+            position: fixed;
+            bottom: 0;
+            background: #111;
+            width: 100%;
+            color: #eee;
+            padding: 10px 0;
         }
+        a { color:#eee; text-decoration:none; }
+        a:hover { text-decoration:underline; }
     </style>
 </head>
 <body>
-    <h1>What network is it?</h1>
+    <h1>何ですね?</h1>
+    <h2>What network is it?</h2>
+    <h3>Smart | Globe | Sun? Ask here.</h3>
     <form>
-        <input type="text" name="number">
+        <input type="text" name="number" maxlength="4">
         <button>?</button>
     </form>
     <div class="clearfix"></div>
+    <div class="bottom-margin"></div>
     <footer>
         Developed with love, by:
         <a href="https://ghabxph.info">GhabXPH</a>
