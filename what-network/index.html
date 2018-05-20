@@ -111,10 +111,10 @@
 </head>
 <body>
 <div class="wrapper">
-    <h1>何ですね?</h1>
-    <h2>What network is it?</h2>
-    <h3>Smart | Globe | Sun? Ask here.</h3>
-    <form>
+    <h1 class="nani-desu-ka" style="display:none">何ですね?</h1>
+    <h2 class="what-network" style="display:none">What network is it?</h2>
+    <h3 class="smart-globe-sun" style="display:none">Smart | Globe | Sun? Ask here.</h3>
+    <form style="display:none">
         <input type="number" name="number" min="0" max="9999" placeholder="09XX">
         <button>?</button>
     </form>
@@ -310,13 +310,20 @@
 
             obj.prototype.showThings = function() {
                 theNetwork.text('The network of ' + _input + ' is ' + _network);
-                theNetwork.css('color', '');
+                theNetwork.css({
+                    color: '',
+                    opacity: 0
+                });
+                btnClear.css('opacity', 0);
                 if (_input.length === 0) {
                     theNetwork.text('Please type something!');
                     theNetwork.css('color', '#e03030')
                 }
                 theNetwork.show();
                 btnClear.show();
+                (new TimelineMax())
+                    .add(TweenMax.to(theNetwork, 1, { opacity:1 }))
+                    .add(TweenMax.to(btnClear, 1, { opacity:1 }));
                 return this;
             };
 
@@ -369,6 +376,25 @@
         function readInput() {
             return $('input[name=number]').val();
         }
+
+        $('.nani-desu-ka').css({ 'margin-left': -400, opacity: 0 });
+        $('.nani-desu-ka').show();
+        $('.what-network').css({ 'margin-left': 400, opacity:0 });
+        $('.what-network').show();
+        $('.smart-globe-sun').css({ opacity: 0 });
+        $('.smart-globe-sun').show();
+        $('form').css({ opacity:0 })
+        $('form').show();
+        
+        (new TimelineMax())
+            .add(TweenMax.to('.nani-desu-ka', 1, { marginLeft:0, opacity:1 }))
+            .add(TweenMax.to('.what-network', 1, { marginLeft:0, opacity:1 }))
+            .add(TweenMax.to('.smart-globe-sun', 0.5, {  opacity:1 }))
+            .add(TweenMax.to('form', 0.5, { opacity:1 }));
+        // $('.nani-desu-ka').hide();
+        // $('.what-network').hide();
+        // $('.smart-globe-sun').hide();
+        // $('form').hide();
     });
 </script>
 </body>
