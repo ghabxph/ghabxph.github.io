@@ -15,9 +15,14 @@
             display: block;
             float: left;
             width: 195px;
-            padding: 5px;
+            padding: 6px;
             font-size: 60pt;
             text-align: center;
+            border:1px #ccc solid;
+        }
+        input:focus {
+            outline: none;
+            border: 1px #333 solid;
         }
         button {
             display: block;
@@ -69,7 +74,7 @@
             font-weight:200;
         }
         .btnClear {
-            width:70px;
+            width: 70px;
             display: block;
             background: #196;
             padding: 10px 20px;
@@ -79,9 +84,29 @@
         .btnClear:hover { text-decoration:none; }
         a { color:#eee; text-decoration:none; }
         a:hover { text-decoration:underline; }
+        @media only screen and (max-width: 800px) {
+            h1     { font-size:50pt }
+            h2     { font-size:30pt }
+            h3     { font-size:14pt }
+            input  {
+                font-size:30pt;
+                width:100px;
+            }
+            button { font-size:30pt; width:60px }
+            form   { width:174px }
+            .theNetwork { font-size:18pt }
+            .btnClear   { 
+                font-size: 12pt;
+                width: 37px;
+                padding: 5px 15px;
+                margin: 10px auto;
+            }
+            .wrapper { min-width:400px; }
+        }
     </style>
 </head>
 <body>
+<div class="wrapper">
     <h1>何ですね?</h1>
     <h2>What network is it?</h2>
     <h3>Smart | Globe | Sun? Ask here.</h3>
@@ -91,7 +116,7 @@
     </form>
     <div class="clearfix"></div>
     <p class="theNetwork" style="display:none"></p>
-    <a href="#" class="btnClear" >Clear</a>
+    <a href="#" class="btnClear" style="display:none">Clear</a>
     <table border="1" style="display:none">
         <tr>
             <td rowspan="2" style="width:47px">First 3 Digits</td>
@@ -245,78 +270,84 @@
         Developed with love, by:
         <a href="https://ghabxph.info">GhabXPH</a>
     </footer>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.js"
-      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            // DOM ELEMENTS
-            var btnClear = $('.btnClear');
-            var theNetwork = $('.theNetwork');
-            var form = $('form');
+</div> 
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        // DOM ELEMENTS
+        var btnClear = $('.btnClear');
+        var theNetwork = $('.theNetwork');
+        var form = $('form');
 
-            var o = (function(){
-                var obj = function(){};
-                var _input = '';
-                var _network = '';
-                var _networks = {
-                    ''   : 'not yet defined.',
-                    'G'  : 'Globe Telecom',
-                    'SM' : 'Smart Communications',
-                    'SU' : 'Sun Cellular',
-                    'E'  : 'Express Telecom',
-                    'N'  : 'Next Mobile',
-                    'ABS': 'ABS-CBN Mobile',
-                    'CP' : 'Cherry Prepaid'
-                }
-
-                obj.prototype.readInput = function() {
-                    _input = $('input[name=number]').val();
-                    return this;
-                };
-
-                obj.prototype.showThings = function() {
-                    theNetwork.text('The network of ' + _input + ' is ' + _network);
-                    theNetwork.show();
-                    btnClear.show();
-                    return this;
-                };
-
-                obj.prototype.getNetwork = function() {
-                    _network = $('.num-' + _input).text();
-                    networks = _network.split('/');
-                    _network = '';
-                    for (var i = 0; i < networks.length; i++) {
-                        _network += _networks[networks[i]] + ' or ';
-                    }
-                    _network = _network.substring(0, _network.length - 3);
-                    return this;
-                };
-
-                return new obj;
-            })();
-
-            form.submit(function(){
-                var input = readInput();
-                o.readInput()
-                .getNetwork()
-                .showThings();
-                return false;
-            });
-
-            btnClear.click(function() {
-                theNetwork.hide();
-                btnClear.hide();
-                return false;
-            });
-
-            function readInput()
-            {
-                return $('input[name=number]').val();
+        var o = (function(){
+            var obj = function(){};
+            var _input = '';
+            var _network = '';
+            var _networks = {
+                ''   : 'not yet defined.',
+                'G'  : 'Globe Telecom',
+                'SM' : 'Smart Communications',
+                'SU' : 'Sun Cellular',
+                'E'  : 'Express Telecom',
+                'N'  : 'Next Mobile',
+                'ABS': 'ABS-CBN Mobile',
+                'CP' : 'Cherry Prepaid'
             }
+
+            obj.prototype.readInput = function() {
+                _input = $('input[name=number]').val();
+                return this;
+            };
+
+            obj.prototype.showThings = function() {
+                theNetwork.text('The network of ' + _input + ' is ' + _network);
+                theNetwork.css('color', '');
+                if (_input.length === 0) {
+                    theNetwork.text('Please type something!');
+                    theNetwork.css('color', '#e03030')
+                }
+                theNetwork.show();
+                btnClear.show();
+                return this;
+            };
+
+            obj.prototype.getNetwork = function() {
+                _network = $('.num-' + _input).text();
+                networks = _network.split('/');
+                _network = '';
+                for (var i = 0; i < networks.length; i++) {
+                    _network += _networks[networks[i]] + ' or ';
+                }
+                _network = _network.substring(0, _network.length - 3);
+                return this;
+            };
+
+            return new obj;
+        })();
+
+        form.submit(function(){
+            var input = readInput();
+            o.readInput()
+            .getNetwork()
+            .showThings();
+            return false;
         });
-    </script>
+
+        btnClear.click(function() {
+            theNetwork.hide();
+            btnClear.hide();
+            return false;
+        });
+
+        function readInput()
+        {
+            return $('input[name=number]').val();
+        }
+    });
+</script>
 </body>
 </html>
