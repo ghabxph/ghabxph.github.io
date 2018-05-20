@@ -24,6 +24,10 @@
             outline: none;
             border: 1px #333 solid;
         }
+        input[type='number'] { -moz-appearance:textfield }
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button
+        { -webkit-appearance:none; margin:0 }
         button {
             display: block;
             float: left;
@@ -111,7 +115,7 @@
     <h2>What network is it?</h2>
     <h3>Smart | Globe | Sun? Ask here.</h3>
     <form>
-        <input type="text" name="number" maxlength="4" placeholder="09XX">
+        <input type="number" name="number" min="0" max="9999" placeholder="09XX">
         <button>?</button>
     </form>
     <div class="clearfix"></div>
@@ -281,6 +285,7 @@
         // DOM ELEMENTS
         var btnClear = $('.btnClear');
         var theNetwork = $('.theNetwork');
+        var txtNumber = $('input[name=number]');
         var form = $('form');
 
         var o = (function(){
@@ -299,7 +304,7 @@
             }
 
             obj.prototype.readInput = function() {
-                _input = $('input[name=number]').val();
+                _input = txtNumber.val();
                 return this;
             };
 
@@ -343,8 +348,23 @@
             return false;
         });
 
-        function readInput()
-        {
+        txtNumber.keyup(limitInput);
+        txtNumber.keydown(limitInput);
+
+        function limitInput(e) {
+            var input = $(this);
+            input.val(input.val().substring(0, 4));
+            if (e.keyCode === 18) {
+                return true;
+            }
+            if (e.keyCode >= 48 && e.keyCode <= 57) {
+                if (input.val().length === 4) {
+                    return false;
+                }
+            }
+        }
+
+        function readInput() {
             return $('input[name=number]').val();
         }
     });
