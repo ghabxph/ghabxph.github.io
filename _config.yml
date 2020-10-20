@@ -19,14 +19,15 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Gabriel's Blog
-#email:
+email: me@ghabxph.info
 description: >- # this means to ignore newlines until "baseurl:"
   This is Gabriel's personal blog hosted on Github Pages and is powered by Jekyll,
   a static page generator. All topics written here are Gabriel's opinion. It may
   or may not represent facts or reality.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#facebook_username: 
+facebook_username: ghabxph
+github_username: ghabxph
 
 # Build settings
 theme: minima
