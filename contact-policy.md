@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contact Policy
+title: "Contact Policy"
 permalink: /contact-policy/
 ---
 ### **tl;dr**
