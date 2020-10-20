@@ -8,7 +8,7 @@ comments: true
 
 ## Introduction
 
-![WordPress](/assets/images/wordpress-bg-medblue.png)
+![WordPress](/assets/images/wordpress.png)
 
 WordPress is wonderful. It’s free and open-source and it has great community support. It simply does
 the job.  Setting it up is very easy.  All you need is to install  all prerequisite dependencies  on
