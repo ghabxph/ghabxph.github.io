@@ -25,6 +25,6 @@ For  job opportunities,  you may reach out via my  LinkedIn account via PM,  or 
 let’s discuss things there.  I am always open to job opportunities that will expand my knowledge and
 skills.
 
-[site-email]: {{site.email}}
+[site-email]: mailto:{{site.email}}
 [linkedin]: {{site.linkedin_username}}
 
