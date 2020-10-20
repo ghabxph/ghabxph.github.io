@@ -3,6 +3,7 @@ layout: post
 title:  "The Cosmological Argument"
 date:   2020-08-12 21:04:00 +0800
 categories: atheism secularism religion
+comments: true
 ---
 Welcome to the the old and classic, and overused: Cosmological Argument.
  - Insert St. Thomas Aquinas's Cosmological Argument.

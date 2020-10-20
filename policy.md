@@ -1,15 +1,15 @@
 ---
 layout: page
-title: "Contact Policy"
-permalink: /contact-policy/
+title: Policy
+permalink: /policy/
 ---
-### **tl;dr**
-1. Reach me out through my email
-2. Never ever attempt to add me on FB
-2. For job opportunities, reach me out via LinkedIn, or email.
 
+### **Commenting Policy**
+1. Be nice.
+2. Don't be an asshole.
+3. Don't spam my page of forex or investment shits or **99 years of bad luck awaits you.** Yes.
 
-### **Story of my life**
+### **Reaching me out**
 Everyone can  reach me out  through  this email [{{site.email}}][site-email].  I do not  respond  to
 spam or simply annoying emails,  and they’re  automatically  thrown to spam  and blocked forever.  I
 indicated my official social media account on  this page, simply because they’re  just open for dox.
@@ -24,6 +24,12 @@ interesting about it. It’s full of pure personal stuff that you might not be i
 For  job opportunities,  you may reach out via my  LinkedIn account via PM,  or send me an email and
 let’s discuss things there.  I am always open to job opportunities that will expand my knowledge and
 skills.
+
+#### **tl;dr**
+1. Reach me out through my email
+2. Never ever attempt to add me on FB
+2. For job opportunities, reach me out via LinkedIn, or email.
+
 
 [site-email]: mailto:{{site.email}}
 [linkedin]: {{site.linkedin_username}}
