@@ -15,6 +15,14 @@ your own. I understand it, because I meant this content for me to  present  to  
 element of talking in front of students is one important element to  make  this  lecture  digestable
 for students.
 
+## You will Learn
+
+In this page, you will learn:
+
+- The features, creator, and history of **Python**
+- **Python's** design philosophy
+- The use of **Python** in the **Real World**
+
 
 ## Introduction
 
@@ -28,11 +36,11 @@ how to read.
 
 ### What is Python
 
-**Python** - Python is an interpreted, high-level and general-purpose programming language,  created
-by Guido Van Rossum and is first released in 1991.  Python's  design  philosophy  emphasizes  **code
-readability**, with its notable use  of  **significant whitespace**.  Its  language  constructs  and
-object-oriented approach aim to help programmers write clear, logical code for small and large-scale
-projects.
+**Python** - Python  is  an  **interpreted**,  **high-level**  and  **general-purpose**  programming
+language,  created  by  **Guido  Van  Rossum**  and  is  first released in **1991**. Python's design
+philosophy emphasizes **code readability**, with its notable use of  **significant whitespace**. Its
+language constructs and  object-oriented approach aim to help programmers write clear,  logical code
+for small and large-scale projects.
 
 ### Python's Use Case
 
@@ -99,12 +107,32 @@ Python is well-known used for:
 limit. You can almost do anything with Python.
 
 
-#### We will not learn those.
+#### **We will not learn those.**
 
 In this course, you will just learn the very ultra basics. I assume that you have **zero** technical
 experience, but I aim in this course to learn people with zero technical skills.
 
+The goal of this lesson is to introduce you to the world of programming.  I  chose  python  as  your
+introductory programming language, because python is straight forward and is  very  easy  to  learn.
+
+
+## Computer Programming
+Computer programming is the process of designing and building  an  executable  computer  program  to
+accomplish a specific computing result or to perform a specific  task.  Programming  involves  tasks
+such as: analysis, generating algorithms, profiling algorithms' accuracy and  resource  consumption,
+and the implementation of algorithms in a chosen  programming  language  (commonly  referred  to  as
+coding).
+
+The source code of a program is written in one or more languages that are intelligible to
+programmers, rather than machine code, which is directly executed by the central processing unit.
+The purpose of programming is to find a sequence of instructions that will automate the performance
+of a task (which can be as complex as an operating system) on a computer, often for solving a given
+problem. Proficient programming thus often requires expertise in several different subjects,
+including knowledge of the application domain, specialized algorithms, and formal logic.
+
+
 
 ## References
 - [Wikipedia - Python (programming language)](https://en.wikipedia.org/wiki/Python_(programming_language))
-- [Applications for Python](https://www.python.org/about/apps/)
+- [Python.org - Applications for Python](https://www.python.org/about/apps/)
+- [Wikipedia - Computer Programming](https://en.wikipedia.org/wiki/Computer_programming)
