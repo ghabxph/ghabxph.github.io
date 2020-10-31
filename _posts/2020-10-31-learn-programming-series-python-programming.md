@@ -142,3 +142,4 @@ for performing calculations, data processing, automated reasoning, and other tas
 - [Wikipedia - Python (programming language)](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [Python.org - Applications for Python](https://www.python.org/about/apps/)
 - [Wikipedia - Computer Programming](https://en.wikipedia.org/wiki/Computer_programming)
+- [Wikipedia - Algorithm](https://en.wikipedia.org/wiki/Algorithm)
