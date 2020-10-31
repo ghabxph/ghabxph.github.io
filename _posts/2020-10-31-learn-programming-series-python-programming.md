@@ -130,6 +130,12 @@ of a task (which can be as complex as an operating system) on a computer, often 
 problem. Proficient programming thus often requires expertise in several different subjects,
 including knowledge of the application domain, specialized algorithms, and formal logic.
 
+## Algorithm
+In mathematics and computer science, an algorithm (/ˈælɡərɪðəm/ (About this soundlisten)) is a finite
+sequence of well-defined, computer-implementable instructions, typically to solve a class of problems
+or to perform a computation.[1][2] Algorithms are always unambiguous and are used as specifications
+for performing calculations, data processing, automated reasoning, and other tasks.
+
 
 
 ## References
