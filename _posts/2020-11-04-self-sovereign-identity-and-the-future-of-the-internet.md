@@ -15,5 +15,9 @@ at this very present time.
 Imagine a world where you no longer need to keep passwords. You can still keep yourself anonymous
 and create a digital identity online, but the attribute of you being you is still there?
 
+In the world where the self sovereign identity is adopted, passwords are no longer necessary. In
+case that you lost your mobile phone where your source of identity is kept, issuers can revoke
+your ID and you can reclaim your identity in your new wallet and never start over again.
+
 **PS: Writing in progress, I am still gathering some nice thoughts. Of course, this will still be
 revised, and I'll do some proofreads before officially posting it**
